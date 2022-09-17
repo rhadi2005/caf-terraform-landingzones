@@ -29,7 +29,7 @@ platform_template_folder: {{platform_template_folder}}
 
 deployment_mode: {{deployment_mode}}
 
-caf_landingzone_branch: 2203.0
+caf_landingzone_branch: 2203.1
 
 caf_regions:
 {% for region, location in regions.items() %}
@@ -89,7 +89,7 @@ management_groups:
       deploy_core_landing_zones: {{topology.management_groups[region][key].deploy_core_landing_zones | default(True)}}
       clean_up_destination_folder: {{topology.management_groups[region][key].clean_up_destination_folder | default(True)}}
       update_lib_folder: {{topology.management_groups[region][key].update_lib_folder | default(True)}}
-      version_to_deploy: "{{topology.management_groups[region][key].version_to_deploy | default('v1.1.3')}}"
+      version_to_deploy: "{{topology.management_groups[region][key].version_to_deploy | default('v2.3.1')}}"
 {% if topology.management_groups[region][key].root_parent_id is defined %}
       root_parent_id: "{{topology.management_groups[region][key].root_parent_id}}"
 {% endif %}
